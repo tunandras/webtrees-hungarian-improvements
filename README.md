@@ -5,5 +5,5 @@ These are modified PHP files—containing improvements mostly to display on-scre
 <ul>
   <li>For security reasons first save your original .php and .mo files.</li>
   <li>Then upload the PHP files overwriting the originals in the relevant folders on the server.</li>
-  <li>Convert “hu.po” file to “hu.mo” with a converter (for example <a href="http://poedit.net/" target="_blank" title="Opens in new tab.">Poedit</a>) and upload it to webtrees/language/ folder on the server.
+  <li>Convert “hu.po” file to “hu.mo” with a converter (for example <a href="http://poedit.net/" target="_blank" title="Opens in new tab.">Poedit</a> or <a href="https://weblate.org/en/" target="_blank" title="Opens in new tab.">Weblate</a>) and upload it to webtrees/language/ folder on the server.
 </ul>
