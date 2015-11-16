@@ -3,7 +3,7 @@ These are modified PHP files—containing improvements mostly to display on-scre
 
 # Installation / Usage
 <ul>
-  <li>First—for security reasons—save your affected original “.php” and “.po” files.</li>
+  <li>First—for security reasons—save your affected original “.php” and “hu.po” files.</li>
   <li>Download these files to your computer.</li>
   <li>Then upload the PHP files overwriting the originals in the relevant folders on the server.</li>
   <li>Convert “hu.po” file to “hu.mo” with a converter (for example <a href="http://poedit.net/" target="_blank" title="Opens in new tab.">Poedit</a> or <a href="https://weblate.org/en/" target="_blank" title="Opens in new tab.">Weblate</a>) and upload it to your_folder/language/ folder on the server.</li>
