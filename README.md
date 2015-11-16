@@ -3,6 +3,6 @@ These are modified PHP files—containing improvements mostly to display on-scre
 
 # Installation / Usage
 <ul>
-  <li>Just upload PHP files to the relevant folders on the server.</li>
-  <li>Convert hu.po file to hu.mo with a converter (for example <a href="http://poedit.net/" target="_blank" title="Opens in new tab.">Poedit</a>) and upload to language folder on the server.
+  <li>For security reasons first save your original PHP files then upload these files overwriting the originals in the relevant folders on the server.</li>
+  <li>Convert “hu.po” file to “hu.mo” with a converter (for example <a href="http://poedit.net/" target="_blank" title="Opens in new tab.">Poedit</a>) and upload it to webtrees/language/ folder on the server.
 </ul>
