@@ -135,35 +135,35 @@ class FamilyTreeStatisticsModule extends AbstractModule implements ModuleBlockIn
 		if ($stat_first_birth) {
 			$content .= '<div class="stat-row"><div class="facts_label stat-cell">' . I18N::translate('Earliest birth year') . '</div><div class="facts_value stats_value stat-cell">' . $stats->firstBirthYear() . '</div>';
 			if (!$block) {
-				$content .= '<div class="facts_value stat-cell left">' . clearFieldContent($stats->firstBirth()) . '</div>';
+				$content .= '<div class="facts_value stat-cell left">' . FunctionsDb::clearFieldContent($stats->firstBirth()) . '</div>';
 			}
 			$content .= '</div>';
 		}
 		if ($stat_last_birth) {
 			$content .= '<div class="stat-row"><div class="facts_label stat-cell">' . I18N::translate('Latest birth year') . '</div><div class="facts_value stats_value stat-cell">' . $stats->lastBirthYear() . '</div>';
 			if (!$block) {
-				$content .= '<div class="facts_value stat-cell left">' . clearFieldContent($stats->lastBirth()) . '</div>';
+				$content .= '<div class="facts_value stat-cell left">' . FunctionsDb::clearFieldContent($stats->lastBirth()) . '</div>';
 			}
 			$content .= '</div>';
 		}
 		if ($stat_first_death) {
 			$content .= '<div class="stat-row"><div class="facts_label stat-cell">' . I18N::translate('Earliest death year') . '</div><div class="facts_value stats_value stat-cell">' . $stats->firstDeathYear() . '</div>';
 			if (!$block) {
-				$content .= '<div class="facts_value stat-cell left">' . clearFieldContent($stats->firstDeath()) . '</div>';
+				$content .= '<div class="facts_value stat-cell left">' . FunctionsDb::clearFieldContent($stats->firstDeath()) . '</div>';
 			}
 			$content .= '</div>';
 		}
 		if ($stat_last_death) {
 			$content .= '<div class="stat-row"><div class="facts_label stat-cell">' . I18N::translate('Latest death year') . '</div><div class="facts_value stats_value stat-cell">' . $stats->lastDeathYear() . '</div>';
 			if (!$block) {
-				$content .= '<div class="facts_value stat-cell left">' . clearFieldContent($stats->lastDeath()) . '</div>';
+				$content .= '<div class="facts_value stat-cell left">' . FunctionsDb::clearFieldContent($stats->lastDeath()) . '</div>';
 			}
 			$content .= '</div>';
 		}
 		if ($stat_long_life) {
 			$content .= '<div class="stat-row"><div class="facts_label stat-cell">' . I18N::translate('Individual who lived the longest') . '</div><div class="facts_value stats_value stat-cell">' . $stats->LongestLifeAge() . '</div>';
 			if (!$block) {
-				$content .= '<div class="facts_value stat-cell left">' . clearFieldContent($stats->LongestLife()) . '</div>';
+				$content .= '<div class="facts_value stat-cell left">' . FunctionsDb::clearFieldContent($stats->LongestLife()) . '</div>';
 			}
 			$content .= '</div>';
 		}
