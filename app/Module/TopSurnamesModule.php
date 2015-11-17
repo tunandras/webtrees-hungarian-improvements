@@ -79,20 +79,20 @@ class TopSurnamesModule extends AbstractModule implements ModuleBlockInterface {
 
 		// This next function is a bit out of date, and doesn't cope well with surname variants
 
-		// First defining the upper limit of surname occurencies to get at least one row in 
+		// First defining the upper limit of surname occurrences to get at least one row in 
 		// result list if user sets too high number in “Minimum number of occurrences” field. 
 		// Without this definition a short message “No data available in table” appears by 
 		// webtrees\packages\datatables-1.10.7\js\jquery.dataTables.min.js JavaScript file 
 		// without the possibility of translating (and only if presentation style is table; 
 		// all other styles result no message at all)
 		$top_surnames_in_DB = FunctionsDb::getCommonSurnames($WT_TREE->getPreference('COMMON_NAMES_THRESHOLD'), $WT_TREE);
-		$max_occurencies = 0;
+		$max_occurrences = 0;
 		foreach ($top_surnames_in_DB as $array) {
-			if ($array['match'] > $max_occurencies)
-				$max_occurencies = $array['match'];
+			if ($array['match'] > $max_occurrences)
+				$max_occurrences = $array['match'];
 		}
-		if ($threshold > $max_occurencies)
-			$threshold = $max_occurencies;
+		if ($threshold > $max_occurrences)
+			$threshold = $max_occurrences;
 
 		$top_surnames = FunctionsDb::getTopSurnames($WT_TREE->getTreeId(), $threshold, $num);
 
