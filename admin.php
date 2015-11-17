@@ -803,6 +803,7 @@ if (
 						<tr>
 							<td>
 								<?php echo I18N::translate('Total'); ?>
+
 								<?php echo I18N::plural('%s family tree', '%s family trees', count(Tree::getAll()), I18N::number(count(Tree::getAll()))); ?>
 							</td>
 							<td class="text-right flip">
