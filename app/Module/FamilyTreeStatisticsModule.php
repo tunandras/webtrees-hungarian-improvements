@@ -197,7 +197,7 @@ class FamilyTreeStatisticsModule extends AbstractModule implements ModuleBlockIn
 		if ($show_common_surnames) {
 			$surnames = FunctionsDb::getCommonSurnames($WT_TREE->getPreference('COMMON_NAMES_THRESHOLD'), $WT_TREE);
 			if (count($surnames) > 0) {
-				$content .= '<p /><b>' . I18N::translate('Most common surnames') . ': </b>';
+				$content .= '<p><b>' . I18N::translate('Most common surnames') . ': </b>';
 				$content .= '<div class="common_surnames" style="display: inline;">';
 				$i = 0;
 				foreach ($surnames as $indexval => $surname) {
