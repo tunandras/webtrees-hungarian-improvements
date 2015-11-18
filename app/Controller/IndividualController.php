@@ -247,7 +247,7 @@ class IndividualController extends GedcomRecordController {
 				unset($names['Héber név']);
 			}
 			foreach ($names as $key => $value) { // Checking for value pairs which were not shown
-				echo '<span class="error">This name is missing from the list!</span> <strong>'.$key.'</strong> '.$value.' (see IndividualController.php line 250)<br />';
+				echo '<span class="error">This name is missing from the list!</span> <strong>'.$key.'</strong> '.$value.' (see IndividualController.php line 250)<br>';
 			}
 		}
 
