@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: webtrees\n"
 "Report-Msgid-Bugs-To: i18n@webtrees.net\n"
 "POT-Creation-Date: 2015-08-08 21:19+0100\n"
-"PO-Revision-Date: 2015-11-15 13:58+0100\n"
+"PO-Revision-Date: 2015-11-19 13:12+0100\n"
 "Last-Translator: Gyönyör János <gyj@centrum.sk>, Tuna András <tunandras@gmail.com>\n"
 "Language-Team: Hungarian <http://translate.webtrees.net/projects/webtrees/webtrees/hu/>\n"
 "Language: hu\n"
@@ -1223,7 +1223,7 @@ msgstr "Gyermek hozzáadása"
 
 #: app/Controller/FamilyController.php:206 app/Functions/FunctionsEdit.php:957 app/Module/SourcesTabModule.php:93
 msgid "Add a new source citation"
-msgstr "Új forrás idézet hozzáadása"
+msgstr "Új forrásidézet hozzáadása"
 
 #: edit_interface.php:837
 msgid "Add a new spouse"
@@ -1716,19 +1716,19 @@ msgstr "Regisztrációs kérelem engedélyezése az új látogatóknak"
 #. I18N: gedcom tag _AKA
 #: app/GedcomTag.php:963
 msgid "Also known as"
-msgstr "Ismert mint"
+msgstr "Ismert, mint"
 
 #. I18N: gedcom tag _AKA
 #: app/GedcomTag.php:959
 msgctxt "FEMALE"
 msgid "Also known as"
-msgstr "Ismert mint"
+msgstr "Ismert, mint"
 
 #. I18N: gedcom tag _AKA
 #: app/GedcomTag.php:955
 msgctxt "MALE"
 msgid "Also known as"
-msgstr "Ismert mint"
+msgstr "Ismert, mint"
 
 #: app/Stats.php:6732
 msgid "American Samoa"
@@ -2156,7 +2156,7 @@ msgstr "Gyermekek átlagos száma családonként"
 #. I18N: help text for family tree / GEDCOM file names
 #: admin_trees_config.php:632 admin_trees_manage.php:667
 msgid "Avoid spaces and punctuation.  A family name might be a good choice."
-msgstr "Kerülje a szóközöket és írásjeleket.  Egy családnév jó választás lehet."
+msgstr "Kerülje a szóközöket és írásjeleket. Egy vezetéknév jó választás lehet."
 
 #: app/Date/JalaliDate.php:191
 msgctxt "Abbreviation for Persian month: Azar"
@@ -4054,11 +4054,11 @@ msgstr "Tartózkodási dátum"
 
 #: help_text.php:159
 msgid "Date period"
-msgstr "Dátum időszak"
+msgstr "Dátumidőszak"
 
 #: help_text.php:157
 msgid "Date periods are used to indicate that a fact, such as an occupation, continued for a period of time."
-msgstr "Az időszakok azon tények mutatására szolgálnak, amelyeknek folyamatos az időtartamuk, mint pl. a munkahely."
+msgstr "Időszakok az olyan folyamatos tények leírására szolgálnak, mint amilyen egy foglalkozás."
 
 #: help_text.php:148 statistics.php:615
 msgid "Date range"
@@ -4066,7 +4066,7 @@ msgstr "Dátumtartomány"
 
 #: help_text.php:146
 msgid "Date ranges are used to indicate that an event, such as a birth, happened on an unknown date within a possible range."
-msgstr "Dátumtartományt akkor használunk, ha egy esemény, pl. a születés, egy bizonytalan időpontban történt, de egy ismert időtartományon belül."
+msgstr "Dátumtartományt akkor használunk, ha egy esemény, pl. a születés időpontja bizonytalan, de a lehetséges időtartománya ismert."
 
 #: admin_users.php:869
 msgid "Date registered"
@@ -4084,7 +4084,7 @@ msgstr "A dátumok csak akkor váltódnak át, ha az valós kalendáriumi nap.  
 
 #: help_text.php:134
 msgid "Dates are stored using English abbreviations and keywords.  Shortcuts are available as alternatives to these abbreviations and keywords."
-msgstr "A dátumok az Angol rövidítések és kulcsszavak segítségével vannak tárolva.  A rövidítések és kulcsszavak kiválasztására gyorsbillentyűk állnak rendelkezésre."
+msgstr "A dátumokat (a GEDCOM-szabvány előírásainak megfelelő) angol kulcsszavak szerint használjuk. A kulcsszavak helyettesítésére rövidítése állnak rendelkezésre."
 
 #: modules_v3/family_group_report/report.xml:809 modules_v3/individual_ext_report/report.xml:556 modules_v3/individual_report/report.xml:559
 msgid "Daughter"
@@ -6415,22 +6415,22 @@ msgstr "Ha egy rendszergazda létrehoz egy félhasználói fiókot és az ellen�
 #: help_text.php:228
 #, php-format
 msgid "If an individual does not have a surname, no slashes are needed: <%s>Jón Einarsson<%s>"
-msgstr "Ha nincs vagy nem volt valakinek családneve, ne használjunk //-t. <%s>Jón Einarsson<%s>"
+msgstr "Ha egy személynek nincs vezetékneve, nem szükségesek a perjelek: <%s>Jón Einarsson<%s>"
 
 #: help_text.php:226
 #, php-format
 msgid "If an individual has two separate surnames, both should be enclosed by slashes: <%s>José Antonio /Gómez/ /Iglesias/<%s>"
-msgstr "Ha több családneve is van valakinek, mindkettőt külön-külön tegyük /-jelek közé: <%s>José Antonio /Gómez/ /Iglesias/<%s>"
+msgstr "Ha valakinek több vezetékneve van, mindegyiket tegyük külön-külön perjelek közé: <%s>José Antonio /Gómez/ /Iglesias/<%s>"
 
 #: help_text.php:232
 #, php-format
 msgid "If an individual was known by a nickname which is not part of their formal name, it should be enclosed by quotation marks.  For example, <%s>John &quot;Nobby&quot; /Clark/<%s>."
-msgstr "Ha valakit más néven ismert a környezete, mint ami része a hivatalos nevének, idézőjelekbe helyezve jelöljük:  <%s>/Kiskőrösi/ Gábor &quot;Tibi&quot;<%s>."
+msgstr "Ha egy személy becenevét a hivatalos neve nem tartalmazza, idézőjelek közé kell tenni:  <%s>Gábor &quot;Tibi&quot; /Kiskőrösi/<%s>. Szerencsésebb azonban, ha a személy becenevét ide nem, csak a lejjebb található <b>Becenév</b> rovatba írjuk be, mert így a webhely megfelelő oldalain automatikusan idézőjelek közé kerül."
 
 #: help_text.php:230
 #, php-format
 msgid "If an individual was not known by their first given name, the preferred name should be indicated with an asterisk: <%s>John Paul* /Smith/<%s>"
-msgstr "Ha valakit környezete nem az első utóneve alatt ismert, a hétköznapokban használt nevet csillag kövesse: <%s>/Szabó/ Gáspár János*<%s>"
+msgstr "Ha valakinek nem az első utóneve a közismert, az előnyben részesített utónevet kövesse csillag: <%s>Gáspár János* /Szabó/<%s>"
 
 #. I18N: Help text for the “Names to add to common surnames (comma separated)” configuration setting
 #: admin_trees_config.php:1203
@@ -6440,7 +6440,7 @@ msgstr "Ha egy vezetéknév előfordulása nem éri el a küszöbértéket, nem 
 #: help_text.php:224
 #, php-format
 msgid "If the surname is unknown, use empty slashes: <%s>Mary //<%s>"
-msgstr "Ha a családnév ismeretlen, használj két közvetlenül egymást követő /-jelet: <%s>// Erzsébet<%s>"
+msgstr "Ha a vezetéknév ismeretlen, használjunk két, egymást követő perjelet: <%s>Erzsébet //<%s>"
 
 #. I18N: Help text for the “Age at which to assume an individual is dead” configuration setting
 #: admin_trees_config.php:422
@@ -6522,7 +6522,7 @@ msgstr "Ha a látogatók részére megjeleníti az élő személyeket, minden eg
 #. I18N: Help text for the “Names to remove from common surnames (comma separated)” configuration setting
 #: admin_trees_config.php:1223
 msgid "If you want to remove a surname from the Common Surname list without increasing the threshold value, you can do that by entering the surname here.  If more than one surname is entered, they must be separated by a comma.  <b>Surnames are case-sensitive</b>.  Surnames entered here will also be removed from the “Top surnames” list on the “Home page”."
-msgstr "Ha bizonyos vezetékneveket el kíván távolítani a \"Gyakori vezetéknevek\" listáról anélkül, hogy csökkentenie kelljen a küszöbértéket, ezt megteheti a nem kívánt családnév megadásával.  Ha több nevet kíván felvenni a listára, vesszővel válassza el azokat.  <b>A vezetéknevek érzékenyek a kis- és nagybetűk közötti különbségre</b>.  Az itt megadott vezetéknevek a nyitólap \"Leggyakoribb vezetéknevek\" listájáról is lekerülnek."
+msgstr "Ha bizonyos vezetékneveket el kíván távolítani a \"Gyakori vezetéknevek\" listáról anélkül, hogy csökkentenie kelljen a küszöbértéket, ezt megteheti a nem kívánt vezetéknév megadásával.  Ha több nevet kíván felvenni a listára, vesszővel válassza el azokat.  <b>A vezetéknevek érzékenyek a kis- és nagybetűk közötti különbségre</b>.  Az itt megadott vezetéknevek a nyitólap \"Leggyakoribb vezetéknevek\" listájáról is lekerülnek."
 
 #: setup.php:182
 msgid "If your server’s security policy permits it, you will be able to request increased memory or CPU time using the webtrees administration page.  Otherwise, you will need to contact your server’s administrator."
@@ -11028,7 +11028,7 @@ msgstr "Rövid változat"
 
 #: help_text.php:136 help_text.php:148 help_text.php:159
 msgid "Shortcut"
-msgstr "Parancsikon"
+msgstr "Rövidítés"
 
 #: statistics.php:250
 msgid "Shortest marriage"
@@ -11387,7 +11387,7 @@ msgstr "Sierra Leone"
 
 #: help_text.php:164
 msgid "Simple dates are assumed to be in the gregorian calendar.  To specify a date in another calendar, add a keyword before the date.  This keyword is optional if the month or year format make the date unambiguous."
-msgstr "Egyszerű dátumok alapértelmezetten Gergely-naptárhoz lesznek rendelve.  Más naptár dátumait a dátumot megelőző egyedi kulcsszavakkal lehet megadni. (Ez a kulcsszó elhagyható, ha a hónap vagy év formátuma egyértelműen csak egy bizonyos naptárral értelmezhető)."
+msgstr "Az egyszerű dátumok – feltételezés értelmében – Gergely-naptár szerintiek.  Más típusú naptár a dátumot megelőző egyedi kulcsszavak megadásával írható elő. Ez a kulcsszó elhagyható, ha a hónap vagy az év formátuma egyértelműsíti a dátumot."
 
 #: find.php:165
 msgid "Simple search filter based on the characters entered, no wildcards are accepted."
@@ -11563,7 +11563,7 @@ msgstr "Forrás azonosító előtag"
 #. I18N: Help text for the “Use full source citations” configuration setting
 #: admin_trees_config.php:2214
 msgid "Source citations can include fields to record the quality of the data (primary, secondary, etc.) and the date the event was recorded in the source.  If you don’t use these fields, you can disable them when creating new source citations."
-msgstr "A forrás idézetek tartalmazhatnak mezőket a az adatok minősítésének (elsődleges, másodlagos stb.) bejegyzésére és esemény dátumának a forrásból kinyerve.  Ha Ön nem használja ezeket a mezőket, akkor lehetősége van letiltani ezeket az új forrásidézet létrehozásakor."
+msgstr "A forrásidézetek tartalmazhatnak mezőket a az adatok minősítésének (elsődleges, másodlagos stb.) bejegyzésére és esemény dátumának a forrásból kinyerve.  Ha Ön nem használja ezeket a mezőket, akkor lehetősége van letiltani ezeket az új forrásidézet létrehozásakor."
 
 #. I18N: Label for search field
 #: find.php:237
@@ -11989,11 +11989,11 @@ msgstr "Thaiföld"
 
 #: help_text.php:219
 msgid "The <b>name</b> field contains the individual’s full name, as they would have spelled it or as it was recorded.  This is how it will be displayed on screen.  It uses standard genealogy annotations to identify different parts of the name."
-msgstr "A <b>név</b> mező a személy teljes nevét tartalmazza, úgy ahogy betűzve volt vagy ahogy fel van jegyezve.  Így fog megjelenni a képernyőn.  A nevek részeinek különválasztására a származástan szabvány szerinti jelzései vannak használva."
+msgstr "A <b>Név</b> mező a személy teljes, hivatalosan bejegyzett nevét tartalmazza. Ez többnyire automatikusan kerül a rovatba – a többi adat beírása után (itt lehetőleg csak akkor módosítsuk, ha muszáj). A név részeinek sorrendje és azonosítása a GEDCOM származástani szabvány szerint történik."
 
 #: help_text.php:239
 msgid "The <b>surname</b> field contains a name that is used for sorting and grouping.  It can be different to the individual’s actual surname which is always taken from the <b>name</b> field.  This field can be used to sort surnames with or without a prefix (Gogh / van Gogh) and to group spelling variations or inflections (Kowalski / Kowalska).  If an individual needs to be listed under more than one surname, each name should be separated by a comma."
-msgstr "A <b>vezetéknév</b> mező sorrendbe szedés, csoportosítás és keresési célokat szolgál.  Különbözhet a személy valós vagy hivatalos vezetéknevétől, amely mindig a <b>név</b> mezőből származik. Az említett mezőt használhatjuk arra, hogy pl. előtagos neveket helyesen soroljuk ábécérendbe (Gogh / van Gogh) vagy hogy különböző írásos változatokat egy alá csoportosítsunk (Széchenyi / Széchényi). Ha több mint egy családnévforma alatt legyen valaki fellelhető, vesszővel elválasztott listát írjunk ide."
+msgstr "A <b>Vezetéknév</b> mező sorba rendezési, csoportosítási és keresési célokat szolgál. Különbözhet a személy valós vagy hivatalos vezetéknevétől, amely mindig a <b>Név</b> mezőből származik. Ez a mező használható a nevek előtagos vagy anélküli ábécébe rendezésére (Gogh / van Gogh) és a különbözőképpen írt változatok csoportosítására (Széchenyi / Széchényi). Ha egy személyt egynél több vezetéknév kilistázásakor is szeretnénk látni, a nevei közé tegyünk vesszőt."
 
 #: app/Module/FrequentlyAskedQuestionsModule.php:454
 msgid "The FAQ list is empty."
@@ -12035,7 +12035,7 @@ msgstr "A rendszergazdát értesítettük.  Amint megadja az engedélyt a bejele
 #: action.php:45
 #, php-format
 msgid "The changes to “%s” have been accepted."
-msgstr "„%s” módosításai érvénybe léptek."
+msgstr "%s adatmódosításai érvényessé váltak."
 
 #. I18N: %s is the name of an individual, source or other record
 #: action.php:232
@@ -12354,7 +12354,7 @@ msgstr "A családfa mérete, legrégebbi és legújabb események, gyakori nevek
 #: help_text.php:222
 #, php-format
 msgid "The surname is enclosed by slashes: <%s>John Paul /Smith/<%s>"
-msgstr "A családnevet per-jelek (/) közé zárjuk:  <%s>/Kovács/ István<%s>"
+msgstr "A vezetéknevet perjelek (/) fogják közre:  <%s>István /Kovács/<%s>"
 
 #: addmedia.php:355
 #, php-format
@@ -12634,7 +12634,7 @@ msgstr "Ennek a családfának nincsenek megjeleníthető képei."
 #. I18N: do not translate the #keywords#
 #: app/Module/HtmlBlockModule.php:160
 msgid "This family tree was last updated on #gedcomUpdated#.  There are #totalSurnames# surnames in this family tree.  The earliest recorded event is the #firstEventType# of #firstEventName# in #firstEventYear#.  The most recent event is the #lastEventType# of #lastEventName# in #lastEventYear#.<br><br>If you have any comments or feedback please contact #contactWebmaster#."
-msgstr "A családfa utoljára #gedcomUpdated# lett frissítve. Összesen #totalSurnames# családnév van a családfában. A legkorábbi bejegyzett esemény adatai: esemény: #firstEventType#, személy: #firstEventName#, év: #firstEventYear#."
+msgstr "A családfa utoljára #gedcomUpdated# lett frissítve. Összesen #totalSurnames# vezetéknév van a családfában. A legkorábbi bejegyzett esemény adatai: esemény: #firstEventType#, személy: #firstEventName#, év: #firstEventYear#."
 
 #. I18N: %s is a date
 #: app/Module/FamilyTreeStatisticsModule.php:95 app/Module/HtmlBlockModule.php:165
@@ -12676,13 +12676,13 @@ msgstr "Ez az egyén törölve lett.  Értékelje át az eltávolítást amit va
 
 #: individual.php:78
 msgid "This individual has been edited.  The changes need to be reviewed by a moderator."
-msgstr "Ez az egyén módosítva lett.  A változtatás oldalkezelői jóváhagyást igényel."
+msgstr "E személy adatai módosultak. A változtatás oldalkezelői jóváhagyást igényel."
 
 #. I18N: %1$s is “accept”, %2$s is “reject”.  These are links.
 #: individual.php:69
 #, php-format
 msgid "This individual has been edited.  You should review the changes and then %1$s or %2$s them."
-msgstr "Ez az egyén módosítva lett.  Ellenőrizze a változtatásokat, melyeket vagy <b>%1$s</b> vagy <b>%2$s</b>."
+msgstr "E személy adatai módosultak. Ellenőrizze a változtatásokat, melyeket vagy <b>%1$s</b> vagy <b>%2$s</b>."
 
 #. I18N: Help text for the “Default individual” configuration setting
 #: admin_trees_config.php:685 admin_users.php:598 edituser.php:204
@@ -14631,19 +14631,19 @@ msgstr "engedélyez"
 #. I18N: The name by which an individual is also known.  e.g. a professional name or a stage name
 #: app/GedcomCode/GedcomCodeName.php:67
 msgid "also known as"
-msgstr "Ismert mint"
+msgstr "ismert, mint"
 
 #. I18N: The name by which an individual is also known.  e.g. a professional name or a stage name
 #: app/GedcomCode/GedcomCodeName.php:64
 msgctxt "FEMALE"
 msgid "also known as"
-msgstr "Ismert mint"
+msgstr "ismert, mint"
 
 #. I18N: The name by which an individual is also known.  e.g. a professional name or a stage name
 #: app/GedcomCode/GedcomCodeName.php:61
 msgctxt "MALE"
 msgid "also known as"
-msgstr "Ismert mint"
+msgstr "ismert, mint"
 
 #. I18N: option in list box “always use this image”
 #: app/Functions/FunctionsEdit.php:630
@@ -15039,13 +15039,13 @@ msgstr "Birtok név"
 #: app/GedcomCode/GedcomCodeName.php:100
 msgctxt "FEMALE"
 msgid "estate name"
-msgstr "birtok név"
+msgstr "birtoknév"
 
 #. I18N: A name given to an individual, from the farm or estate on which they lived or worked
 #: app/GedcomCode/GedcomCodeName.php:97
 msgctxt "MALE"
 msgid "estate name"
-msgstr "birtok név"
+msgstr "birtoknév"
 
 #. I18N: Gedcom EST dates
 #: app/Date.php:304
