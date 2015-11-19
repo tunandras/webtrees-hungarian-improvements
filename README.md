@@ -1,7 +1,7 @@
 # Webtrees—Hungarian improvements
-The improvements below are made in the latest stable (1.7.2) release of Webtrees.
-<h2>Various “individual” files</h2>
-These are modified PHP files—containing improvements mostly to display on-screen names in localized order if language is Hungarian and they include some text adjustments as well.
+The source was the latest stable (1.7.2) release of Webtrees.
+<h2>Various files</h2>
+These are modified PHP files—containing improvements mostly to display on-screen names in localized order if language is Hungarian. According to the Hungarian rules the surname has to be in front of given names on individuals’ page, on the sidebar, in the Edit name form, in autocomplete lists, etc. (It’s possible to do the same in other languages too, but I am not sure in which ones. As far as I know the Japanese is such a language and as I saw in the forum of <b>webtrees</b> in the discussion <a href="https://www.webtrees.net/index.php/en/forum/help-for-ver-1-6-2/30143-name-order" target="_blank" title="Opens in new tab.">Name order</a> in March this year—maybe Chinese and Vietnamese too. And probably Korean; see chapter <a href="https://en.wikipedia.org/wiki/Personal_name#Lexical_order" target="_blank" title="Opens in new tab.">Lexical order</a> in Wikipedia’s “Personal name.”) The changed files include some text adjustments as well.
 <h2>Hungarian translation file</h2>
 There are a couple of changes (new translations and corrections of some translated terms) in “hu.po” Hungarian translation file—thanks to Gyönyör János (published by <a href="https://github.com/fisharebest/webtrees/commit/e1c58e6fe3d32e19454598497bbc67d6b749d957" target="_blank" title="Opens in new tab.">fisharebest</a> on October 7).
 <h2>Top surnames module</h2>
@@ -13,8 +13,8 @@ Fixes two issues:
 <h2>Installation / Usage</h2>
 <ul>
   <li>First—for security reasons—save your affected original “.php”, “hu.po” and/or “hu.mo” files.</li>
-  <li>Download listed files above to your computer.</li>
-  <li>Convert downloaded “hu.po” file to “hu.mo” with a converter (for example <a href="http://poedit.net/" target="_blank" title="Opens in new tab.">Poedit</a> or <a href="https://weblate.org/en/" target="_blank" title="Opens in new tab.">Weblate</a>) and upload it to webtrees_folder/language/ folder on the server.</li>
+  <li>Save listed files above to your computer.</li>
+  <li>Convert “hu.po” file to “hu.mo” with a converter (for example <a href="http://poedit.net/" target="_blank" title="Opens in new tab.">Poedit</a> or <a href="https://weblate.org/en/" target="_blank" title="Opens in new tab.">Weblate</a>) and upload it to webtrees_folder/language/ folder on the server.</li>
   <li>Then upload the PHP files overwriting the originals in the relevant folders on the server.</li>
   <li>If you are not satisfied with the result, you can return to the original saved files by replacing the new ones.</li>
 </ul>
