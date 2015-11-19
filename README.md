@@ -1,5 +1,5 @@
 # Webtrees—Hungarian improvements
-The source was the latest stable (1.7.2) release of Webtrees.
+The source was the latest stable (1.7.2) release of <a href="https://launchpad.net/webtrees" target="_blank" title="Opens in new tab.">Webtrees</a>.
 <h2>Various files</h2>
 These are modified PHP files—containing improvements mostly to display on-screen names in localized order if language is Hungarian. According to the Hungarian rules the surname has to be in front of given names on individuals’ page, on the sidebar, in the Edit name form, in autocomplete lists, etc. (It’s possible to do the same in other languages too, but I am not sure in which ones. As far as I know the Japanese is such a language and as I saw in the forum of <b>webtrees</b> in the discussion <a href="https://www.webtrees.net/index.php/en/forum/help-for-ver-1-6-2/30143-name-order" target="_blank" title="Opens in new tab.">Name order</a> in March this year—maybe Chinese and Vietnamese too. And probably Korean language uses <i>Eastern order</i> as well; see chapter <a href="https://en.wikipedia.org/wiki/Personal_name#Lexical_order" target="_blank" title="Opens in new tab.">Lexical order</a> in Wikipedia’s “Personal name.”) Moreover, the changed files include some text adjustments.
 <h2>Hungarian translation file</h2>
