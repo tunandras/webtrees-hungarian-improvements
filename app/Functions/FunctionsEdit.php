@@ -703,6 +703,7 @@ class FunctionsEdit {
 				}
 
 				// Extra markup for specific fact types
+				$is_hu_or_eastern = (WT_LOCALE === "hu" || WT_LOCALE === "vi" || WT_LOCALE === "zh-Hans") ? true : false; // If language is Hungarian or provides Eastern order
 				switch ($fact) {
 					case 'ALIA':
 					case 'ASSO':
@@ -713,7 +714,7 @@ class FunctionsEdit {
 						echo ' onblur="valid_date(this);" onmouseout="valid_date(this);"';
 						break;
 					case 'GIVN':
-						if (WT_LOCALE !== "hu")
+						if (!$is_hu_or_eastern)
 							echo ' autofocus';
 						echo ' data-autocomplete-type="GIVN"';
 						break;
@@ -744,7 +745,7 @@ class FunctionsEdit {
 						echo ' data-autocomplete-type="SOUR"';
 						break;
 					case 'SURN':
-						if (WT_LOCALE === "hu")
+						if ($is_hu_or_eastern)
 							echo ' autofocus';
 					case '_MARNM_SURN':
 						echo ' data-autocomplete-type="SURN"';
