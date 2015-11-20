@@ -2450,8 +2450,9 @@ function print_indi_form($nextaction, Individual $person = null, Family $family 
 	}
 
 	// First - new/existing standard name fields
+	$is_hu_or_eastern = (WT_LOCALE === "hu" || WT_LOCALE === "vi" || WT_LOCALE === "zh-Hans") ? true : false; // If language is Hungarian or provides Eastern order
 	foreach ($name_fields as $tag => $value) {
-		if ((substr_compare($tag, '_', 0, 1) !== 0) && WT_LOCALE !== "hu") {
+		if ((substr_compare($tag, '_', 0, 1) !== 0) && !$is_hu_or_eastern) {
 			FunctionsEdit::addSimpleTag('0 ' . $tag . ' ' . $value);
 		}
 		if ($tag === 'GIVN') {
@@ -2463,7 +2464,7 @@ function print_indi_form($nextaction, Individual $person = null, Family $family 
 		if (isset($GIVN) && $tag === 'SURN')
 			$hungarian_name_fields[$GIVN] = $GIVN_value;
 	}
-	if (WT_LOCALE === "hu") {
+	if ($is_hu_or_eastern) {
 		foreach ($hungarian_name_fields as $tag => $value) {
 			if (substr_compare($tag, '_', 0, 1) !== 0) {
 				FunctionsEdit::addSimpleTag('0 ' . $tag . ' ' . $value);
