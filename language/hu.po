@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: webtrees\n"
 "Report-Msgid-Bugs-To: i18n@webtrees.net\n"
 "POT-Creation-Date: 2015-08-08 21:19+0100\n"
-"PO-Revision-Date: 2015-11-19 13:12+0100\n"
+"PO-Revision-Date: 2015-11-20 14:27+0100\n"
 "Last-Translator: Gyönyör János <gyj@centrum.sk>, Tuna András <tunandras@gmail.com>\n"
 "Language-Team: Hungarian <http://translate.webtrees.net/projects/webtrees/webtrees/hu/>\n"
 "Language: hu\n"
@@ -6568,11 +6568,11 @@ msgstr ""
 
 #: "A családfán belüli összes bejegyzés elérhető a belső hivatkozási számmal (" #? ta help_text.php:266
 msgid "In many cultures it is customary to have a traditional name spelled in the traditional characters and also a romanized version of the name as it would be spelled or pronounced in languages based on the Latin alphabet, such as English.<br><br>If you prefer to use a non-Latin alphabet such as Hebrew, Greek, Russian, Chinese, or Arabic to enter the name in the standard name fields, then you can use this field to enter the same name using the Latin alphabet.  Both versions of the name will appear in lists and charts.<br><br>Although this field is labeled “Romanized”, it is not restricted to containing only characters based on the Latin alphabet.  This might be of use with Japanese names, where three different alphabets may occur."
-msgstr "Több kultúrában szokás a hagyományos betűkkel írt névváltozat mellett a latin betűs névforma használata is, amely a név kiejtés szerinti átirata latin betűkre a latin betűhasználatos nyelveken, mint az angol.<br><br>Ha ön a nem-latin ábécét részesíti előnyben, mint a héber, görög, cirill, kínai vagy arab a nevek bevitelére a név mezőkben, akkor lehetősége van ugyanebbe a mezőbe megadni a latin betűs névváltozatot is.  Mindkét névváltozat megjelenik a listákban és ábrákon is.<br><br>Úgyszintén a latin-betűsnek címkézett mező nem csak a latin ábécére van korlátozva.  Tartalmazhat japán neveket is, ahol három különböző ábécé is előfordulhat."
+msgstr "Több kultúrában szokás a hagyományos betűkkel írt névváltozat mellett a latin betűs névforma használata is, ami a név kiejtés szerinti átirata latin betűkre – az olyan latin betűhasználatos nyelveken, mint az angol.<br><br>Ha Ön a nem-latin héber, görög, cirill, kínai vagy arab ábécét részesíti előnyben a nevek bevitelére a szokásos név mezőkben, ebben a mezőben megadhatja a latin betűs névváltozatot is.  Mindkét névváltozat megjelenik a listákban és ábrákon is.<br><br>Jóllehet ez latin-betűsnek címkézett mező, a tartalma nem csak a latin ábécére korlátozódik.  Tartalmazhat akár olyan japán neveket is, amiben három különböző ábécé is előfordulhat."
 
 #: help_text.php:271
 msgid "In many cultures it is customary to have a traditional name spelled in the traditional characters and also a romanized version of the name as it would be spelled or pronounced in languages based on the Latin alphabet, such as English.<br><br>If you prefer to use the Latin alphabet to enter the name in the standard name fields, then you can use this field to enter the same name in the non-Latin alphabet such as Greek, Hebrew, Russian, Arabic, or Chinese.  Both versions of the name will appear in lists and charts.<br><br>Although this field is labeled “Hebrew”, it is not restricted to containing only Hebrew characters."
-msgstr "Több kultúrában szokás a hagyományos betűkkel írt névváltozat mellett a latin betűs névforma használata is, amely a név kiejtés szerinti átirata latin betűkre, a latin betűhasználatos nyelveken, mint az angol.<br><br>Ha ön a latin ábécét részesíti előnyben a nevek bevitelére a név mezőkben, akkor lehetősége van ugyanebbe a mezőbe megadni a nem-latin héber, görög, cirill, kínai vagy Arab betűs névváltozatot is.  Mindkét névváltozat megjelenik a listákban és ábrákon is.<br><br>Úgyszintén a héber betűsnek címkézett mező nem csak a héber ábécére van korlátozva."
+msgstr "Több kultúrában szokás a hagyományos betűkkel írt névváltozat mellett a latin betűs névforma használata is, ami a név kiejtés szerinti átirata latin betűkre – az olyan latin betűhasználatos nyelveken, mint az angol.<br><br>Ha a szokásos név mezőkben Ön inkább a latin ábécét részesíti előnyben a nevek bevitelére, ebben a rovatban megadhatja a nem-latin ábécé szerinti görög, héber, cirill, arab vagy kínai betűs névváltozatot is.  Mindkét névváltozat megjelenik a listákban és ábrákon is.<br><br>Jóllehet ez a rovat a „Héber név” címkét kapta, a tartalma nem csak a héber ábécére korlátozódik."
 
 #. I18N: Help text for the “Calendar conversion” configuration setting
 #: admin_trees_config.php:717
