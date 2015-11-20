@@ -1220,7 +1220,7 @@ class Individual extends GedcomRecord {
 		$fullNN = str_replace('/', '', $full);
 
 		// Swap given name and surname if language is Hungarian for display on-screen
-		if (WT_LOCALE === "hu") {
+		if (WT_LOCALE === "hu" || WT_LOCALE === "vi" || WT_LOCALE === "zh-Hans") { // If language is Hungarian or provides Eastern order
 			$full = '/' . $SURN . '/ ' . $GIVN;
 			if ($NICK) $full .= ', ' . '"' . $NICK . '"';
 		}
