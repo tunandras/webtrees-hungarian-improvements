@@ -176,8 +176,8 @@ if ($controller->record->canShow()) {
 	echo '<div id="header_accordion1">'; // contain accordions for names
 
 # START
-	$full = ""; // The variable to store in full name in localized order if language is Hungarian
-	if (WT_LOCALE === "hu") {
+	$full = ""; // The variable to store in full name in localized order if language is Hungarian or provides Eastern order
+	if (WT_LOCALE === "hu" || WT_LOCALE === "vi" || WT_LOCALE === "zh-Hans") { // If language is Hungarian or provides Eastern order
 		foreach ($controller->record->getFacts() as $fact) {
 			if ($fact->getTag() == 'NAME') {
 				$individualsNames = $fact->getGedcom();
@@ -202,9 +202,9 @@ if ($controller->record->canShow()) {
 						}
 					}
 				}
-				(isset($surname)) ? $full .= $surname : $full .= '…';
+				$full .= (isset($surname)) ? $surname : '…';
 				$full .= " ";
-				(isset($givenName)) ? $full .= $givenName : $full .= '…';
+				$full .= (isset($givenName)) ? $givenName : '…';
 				if (isset($nickName)) $full .= ", ".I18N::translate('“%s”', $nickName);
 			}
 		}
@@ -238,7 +238,7 @@ if ($controller->record->canShow()) {
 	// Display name details
 	foreach ($controller->record->getFacts() as $fact) {
 		if ($fact->getTag() == 'NAME') {
-			$controller->printNameRecord($fact, $full); // The full name parameter is in localized order if language is Hungarian
+			$controller->printNameRecord($fact, $full); // The full name parameter is in localized order if language is Hungarian or provides Eastern order
 		}
 	}
 
