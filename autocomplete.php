@@ -161,8 +161,8 @@ case 'INDI': // Individuals, whose name contains the search terms
 	foreach ($rows as $row) {
 		$person = Individual::getInstance($row->xref, $WT_TREE, $row->gedcom);
 		if ($person->canShowName()) {
-			$name = $row->n_full; // The variable to store in full name in localized order if language is Hungarian
-			if (WT_LOCALE === "hu") { 
+			$name = $row->n_full; // The variable to store in full name
+			if (WT_LOCALE === "hu" || WT_LOCALE === "vi" || WT_LOCALE === "zh-Hans") { // If language is Hungarian or provides Eastern order
 				$names = preg_split("/[\s]+/", $name);
 				$name = $names[count($names)-1];
 				for ($i=0; $i<count($names)-1; $i++)
