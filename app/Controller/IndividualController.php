@@ -136,7 +136,8 @@ class IndividualController extends GedcomRecordController {
 	 *
 	 * @param Fact $event the event object
 	 */
-	public function printNameRecord(Fact $event, $fullName) { // Value of $fullName derives from individual.php in localized order if language is Hungarian
+	public function printNameRecord(Fact $event, $fullName) { // Value of $fullName derives from individual.php in localized order if language is Hungarian or provides Eastern order
+		$is_hu_or_eastern = (WT_LOCALE === "hu" || WT_LOCALE === "vi" || WT_LOCALE === "zh-Hans") ? true : false;
 		$factrec = $event->getGedcom();
 
 		// Create a dummy record, so we can extract the formatted NAME value from the event.
@@ -163,7 +164,7 @@ class IndividualController extends GedcomRecordController {
 		echo '<div class="name1">';
 		echo '<dl><dt class="label">', I18N::translate('Name'), '</dt>';
 		$dummy->setPrimaryName(0);
-		if (WT_LOCALE === "hu") // Echo individual’s name in localized order if language is Hungarian
+		if ($is_hu_or_eastern) // Echo individual’s name in localized order if language is Hungarian or provides Eastern order
 			echo '<dd class="field">', $fullName;
 		else
 			echo '<dd class="field">', $dummy->getFullName();
@@ -183,17 +184,17 @@ class IndividualController extends GedcomRecordController {
 		echo '</dl>';
 		echo '</div>';
 		$ct = preg_match_all('/\n2 (\w+) (.*)/', $factrec, $nmatch, PREG_SET_ORDER);
-		$names = []; // Create an associative array to store name values for echoing them when language is Hungarian
+		$names = []; // Create an associative array to store name values for echoing them when language is Hungarian or provides Eastern order
 		for ($i = 0; $i < $ct; $i++) {
-			if (WT_LOCALE !== "hu") echo '<div>'; // Don’t echo (in this for loop) if language is Hungarian
+			if (!$is_hu_or_eastern) echo '<div>'; // Don’t echo (in this “for” loop) if language is Hungarian or provides Eastern order
 				$fact = $nmatch[$i][1];
 				if ($fact != 'SOUR' && $fact != 'NOTE' && $fact != 'SPFX') {
-					if (WT_LOCALE !== "hu") echo '<dl><dt class="label">', GedcomTag::getLabel($fact, $this->record), '</dt>';
-					if (WT_LOCALE !== "hu") echo '<dd class="field">'; // Before using dir="auto" on this field, note that Gecko treats this as an inline element but WebKit treats it as a block element
+					if (!$is_hu_or_eastern) echo '<dl><dt class="label">', GedcomTag::getLabel($fact, $this->record), '</dt>';
+					if (!$is_hu_or_eastern) echo '<dd class="field">'; // Before using dir="auto" on this field, note that Gecko treats this as an inline element but WebKit treats it as a block element
 					if (isset($nmatch[$i][2])) {
 							$name = Filter::escapeHtml($nmatch[$i][2]);
 							$name = preg_replace('/(\S*)\*/', '<span class="starredname">\\1</span>', $name);
-							$names[GedcomTag::getLabel($fact, $this->record)] = $name; // Fill the associative array with name values to echo them when language is Hungarian
+							$names[GedcomTag::getLabel($fact, $this->record)] = $name; // Fill the associative array with name values to echo them when language is Hungarian or provides Eastern order
 							$name = str_replace('/', '', $name);
 							switch ($fact) {
 							case 'TYPE':
@@ -204,50 +205,48 @@ class IndividualController extends GedcomRecordController {
 								// Where it is not a substring of the real surname, show it after the real surname.
 								$surname = Filter::escapeHtml($primary_name['surname']);
 								if (strpos($primary_name['surname'], str_replace(',', ' ', $nmatch[$i][2])) !== false) {
-									if (WT_LOCALE !== "hu") echo '<span dir="auto">' . $surname . '</span>';
+									if (!$is_hu_or_eastern) echo '<span dir="auto">' . $surname . '</span>';
 								} else {
-									if (WT_LOCALE !== "hu") echo I18N::translate('%1$s (%2$s)', '<span dir="auto">' . $surname . '</span>', '<span dir="auto">' . $name . '</span>');
+									if (!$is_hu_or_eastern) echo I18N::translate('%1$s (%2$s)', '<span dir="auto">' . $surname . '</span>', '<span dir="auto">' . $name . '</span>');
 								}
 								break;
 							default:
-								if (WT_LOCALE !== "hu") echo '<span dir="auto">' . $name . '</span>';
+								if (!$is_hu_or_eastern) echo '<span dir="auto">' . $name . '</span>';
 								break;
 							}
 						}
-					if (WT_LOCALE !== "hu") echo '</dd>';
-					if (WT_LOCALE !== "hu") echo '</dl>';
+					if (!$is_hu_or_eastern) echo '</dd>';
+					if (!$is_hu_or_eastern) echo '</dl>';
 				}
-			if (WT_LOCALE !== "hu") echo '</div>';
+			if (!$is_hu_or_eastern) echo '</div>';
 		}
-		if (WT_LOCALE === "hu") { // Echo this block if language is Hungarian
+		if ($is_hu_or_eastern) { // Handle names if language is Hungarian or provides Eastern order
 			$onLeft = '<div><dl><dt class="label">';
 			$inMiddle = '</dt><dd class="field"><span dir="auto">';
 			$onRight = "</span></dd></dl></div>\n";
-			if (isset($names["Vezetéknév"])) {
-				echo $onLeft.'Vezetéknév'.$inMiddle.$names["Vezetéknév"].$onRight;
-				unset($names['Vezetéknév']);
+			if (WT_LOCALE === "hu") $surname_key = "Vezetéknév";
+			if (WT_LOCALE === "vi") $surname_key = "Tên Họ";
+			if (WT_LOCALE === "zh-Hans") $surname_key = "姓氏";
+			if (isset($names[$surname_key])) { // Surname steps to the first line (changing line order)
+				echo $onLeft.$surname_key.$inMiddle.$names[$surname_key].$onRight;
+				unset($names[$surname_key]);
 			}
-			if (isset($names["Utónév"])) {
-				echo $onLeft.'Utónév'.$inMiddle.$names["Utónév"].$onRight;
-				unset($names['Utónév']);
+			foreach ($names as $key => $value) {
+				if (isset($value)) {
+					if ($key === 'Házassági név' || $key === 'Tên sau khi lập gia-đình' || $key === '婚后名字') { // Married name
+						$value = preg_replace('/\/$/', "", $value);
+						$splitMarrName = preg_split('/\s*\//', $value);
+						$value = $splitMarrName[1]." ".$splitMarrName[0]; // Swap given name and surname (for localized order)
+					}
+					if ($key === 'Héber név' || $key === 'Hê-brơ' || $key === '犹太人') { // Hebrew name
+						$value = str_replace('/', '', $value);
+					}
+					echo $onLeft.$key.$inMiddle.$value.$onRight;
+					unset($names[$key]);
+				}
 			}
-			if (isset($names["Házassági név"])) {
-				$names['Házassági név'] = preg_replace('/\/$/', "", $names['Házassági név']);
-				$splitMarrName = preg_split('/\s*\//', $names['Házassági név']);
-				$names['Házassági név'] = $splitMarrName[1]." ".$splitMarrName[0]; // Swap given name and surname (for localized order)
-				echo $onLeft.'Házassági név'.$inMiddle.$names["Házassági név"].$onRight;
-				unset($names['Házassági név']);
-			}
-			if (isset($names["Becenév"])) {
-				echo $onLeft.'Becenév'.$inMiddle.$names["Becenév"].$onRight;
-				unset($names['Becenév']);
-			}
-			if (isset($names["Héber név"])) {
-				echo $onLeft.'Héber név'.$inMiddle.$names["Héber név"].$onRight;
-				unset($names['Héber név']);
-			}
-			foreach ($names as $key => $value) { // Checking for value pairs which were not shown
-				echo '<span class="error">This name is missing from the list!</span> <strong>'.$key.'</strong> '.$value.' (see IndividualController.php line 250)<br>';
+			foreach ($names as $key => $value) { // Which value pair was not shown?
+				echo '<span class="error">The </span><strong>'.$key.':</strong> '.$value.'<span class="error"> name pair was not handled in file IndividualController.php from line 230.</span><br>';
 			}
 		}
 
