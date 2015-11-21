@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: webtrees\n"
 "Report-Msgid-Bugs-To: i18n@webtrees.net\n"
 "POT-Creation-Date: 2015-08-08 21:19+0100\n"
-"PO-Revision-Date: 2015-11-20 14:27+0100\n"
+"PO-Revision-Date: 2015-11-21 15:26+0100\n"
 "Last-Translator: Gyönyör János <gyj@centrum.sk>, Tuna András <tunandras@gmail.com>\n"
 "Language-Team: Hungarian <http://translate.webtrees.net/projects/webtrees/webtrees/hu/>\n"
 "Language: hu\n"
@@ -1312,7 +1312,7 @@ msgstr "GEDCOM média elérési útvonalak hozzáadása a fájlnevekhez"
 #. I18N: A configuration setting
 #: admin_trees_config.php:936
 msgid "Add to TITLE header tag"
-msgstr "Fejléc \"TITLE\" címkéhez adni"
+msgstr "A HTML header tagben lévő „TITLE”-címke toldaléka"
 
 #. I18N: Menu option.  Add [the current page] to the list of favorites
 #: app/Controller/FamilyController.php:125 app/Controller/IndividualController.php:343 app/Controller/MediaController.php:97 app/Controller/NoteController.php:68 app/Controller/RepositoryController.php:84 app/Controller/SourceController.php:84 app/Theme/AbstractTheme.php:1286
@@ -2917,7 +2917,7 @@ msgstr "Naptár átváltás"
 #. I18N: gedcom tag CALN
 #: app/GedcomTag.php:234
 msgid "Call number"
-msgstr "Gyűjtemény azonosító"
+msgstr "Gyűjteményazonosító"
 
 #: app/Stats.php:6846
 msgid "Cambodia"
@@ -4696,7 +4696,7 @@ msgstr "A megadott felhasználónév már foglalt.  Kérem, válasszon másikat.
 #. I18N: Help text for the “webtrees reply address” configuration setting
 #: admin_trees_config.php:882
 msgid "E-mail address to be used in the “From:” field of e-mails that webtrees creates automatically.<br><br>webtrees can automatically create e-mails to notify administrators of changes that need to be reviewed.  webtrees also sends notification e-mails to users who have requested an account.<br><br>Usually, the “From:” field of these automatically created e-mails is something like <i>From: webtrees-noreply@yoursite</i> to show that no response to the e-mail is required.  To guard against spam or other e-mail abuse, some e-mail systems require each message’s “From:” field to reflect a valid e-mail account and will not accept messages that are apparently from account <i>webtrees-noreply</i>."
-msgstr "E-mail cím, a „Feladó:” mezőben lesz használva a webtrees által önállóan létrehozott e-maileknél.<br><br>A webtrees önállóan is létrehozhat e-maileket a rendszergazdák értesítésére az ellenőrizendő változtatásokról.  Továbbá a webtrees értesítő e-mailt küld a fiókot igénylő felhasználóknak is.<br><br>Általában, a „Feladó:” mezeje ezeknek az önállóan létrehozott e-maileknek valami hasonló: <i>Feladó: webtrees-nem-var-valaszt@az-on-oldala</i> azt hangsúlyozni, hogy erre az e-mailre nem kell válaszolni.  A rosszindulatú e-mail kiszűrése érdekében egyes e-mail rendszerek megkívánjál, hohy minden üzenet „Feladó:” mezeje valós e-mail fióknak tűnjön és nem fogják elfogadni a más kinézetű fiókok <i>webtrees-nem-var-valaszt</i> üzeneteit."
+msgstr "Ez az e-mail cím kerül a webtrees által automatikusan létrehozott e-mailek „Feladó:” rovatába.<br><br>A webtrees önállóan is létrehozhat e-maileket a rendszergazdák értesítésére az ellenőrizendő változtatásokról, továbbá értesítő e-mailt küld fiókot igénylő felhasználóknak is.<br><br>Általában, ezeknek az automatikusan létrehozott e-mailek „Feladó:” rovata valami ilyen: <i>Feladó: webtrees-nem-var-valaszt@az-on-oldala</i>, hangsúlyozva, hogy erre az e-mailre nem kell válaszolni. A rosszindulatú e-mailek kiszűrése érdekében egyes e-mail rendszerek megkívánják, hogy minden üzenet „Feladó:” rovata valós e-mail fióknak tűnjön, és nem fogadják el a <i>webtrees-nem-var-valaszt</i> alakútól eltérő fiókok üzeneteit."
 
 #: help_text.php:293
 msgid "Each source records specific events, generally for a given date range and for a place jurisdiction.  For example a Census records census events and church records record birth, marriage, and death events.<br><br>Select the events that are recorded by this source from the list of events provided.  The date should be specified in a range format such as <i>FROM 1900 TO 1910</i>.  The place jurisdiction is the name of the lowest jurisdiction that encompasses all lower-level places named in this source.  For example, “Oneida, Idaho, USA” would be used as a source jurisdiction place for events occurring in the various towns within Oneida County.  “Idaho, USA” would be the source jurisdiction place if the events recorded took place not only in Oneida County but also in other counties in Idaho."
@@ -4962,7 +4962,7 @@ msgstr "Tetszőleges jegyzet a kedvencről"
 
 #: addmedia.php:423 modules_v3/GEDFact_assistant/_MEDIA/media_0_inverselink.php:175
 msgid "Enter or search for the ID of the individual, family, or source to which this media object should be linked."
-msgstr "Írja be vagy keresse ki annak a személynek, családnak vagy forrásnak az azonosítóját amihez ez a médiaelem hozzá lesz rendelve."
+msgstr "Írja be vagy keresse ki annak a személynek, családnak vagy forrásnak az azonosítóját amihez ezt a médiaelemet rendeli."
 
 #: reportengine.php:152
 msgid "Enter report values"
@@ -5871,7 +5871,7 @@ msgstr "Nemek ikonja a táblázatokon"
 #. I18N: A configuration setting
 #: admin_trees_config.php:890
 msgid "Genealogy contact"
-msgstr "E-mail cím származástani kérdésekhez"
+msgstr "Kapcsolat származástani ügyben"
 
 #. I18N: Individuals, sources, dates, places, etc.
 #: admin_trees_manage.php:459
@@ -6375,7 +6375,7 @@ msgstr "Összevetve"
 #. I18N: A configuration setting
 #: admin_trees_config.php:751
 msgid "ID settings"
-msgstr "Azonosító beállítások"
+msgstr "Azonosítóbeállítások"
 
 #: admin_site_logs.php:275 admin_site_logs.php:330
 msgid "IP address"
@@ -6634,7 +6634,7 @@ msgstr "2. személy"
 
 #: admin_trees_config.php:759
 msgid "Individual ID prefix"
-msgstr "Személy azonosító előtag"
+msgstr "Személyazonosító előtag"
 
 #: statistics.php:533
 msgid "Individual distribution"
@@ -6721,7 +6721,7 @@ msgstr "belső üzenetküldő"
 
 #: app/Functions/FunctionsEdit.php:239
 msgid "Internal messaging with emails"
-msgstr "Belső üzenet email-el megerősítve"
+msgstr "Belső üzenet – e-maillel megerősítve"
 
 #. I18N: gedcom tag _INTE
 #: app/GedcomTag.php:1543
@@ -7862,7 +7862,7 @@ msgstr "Média"
 
 #: admin_trees_config.php:827
 msgid "Media ID prefix"
-msgstr "Média-elem azonosító előtag"
+msgstr "Médiaelem-azonosító előtag"
 
 #. I18N: Label for search field
 #: find.php:159
@@ -8868,7 +8868,7 @@ msgstr "Megjegyzés"
 
 #: admin_trees_config.php:844
 msgid "Note ID prefix"
-msgstr "Megjegyzés azonosító előtag"
+msgstr "Megjegyzésazonosító előtag"
 
 #: help_text.php:261
 msgid "Note that if a user account is linked to a record, then that user will always be able to view that record."
@@ -10032,12 +10032,12 @@ msgstr "Bejegyzés"
 #. I18N: gedcom tag RIN
 #: app/GedcomTag.php:750
 msgid "Record ID number"
-msgstr "Bejegyzés azonosítója"
+msgstr "Rekordazonosító szám (RIN)"
 
 #. I18N: gedcom tag RFN
 #: app/GedcomTag.php:746
 msgid "Record file number"
-msgstr "Adat állomány-azonosító"
+msgstr "Adatállomány-azonosító"
 
 #: search.php:82 statistics.php:347
 msgid "Records"
@@ -10245,7 +10245,7 @@ msgstr "Adatgyűjtemény"
 
 #: admin_trees_config.php:810
 msgid "Repository ID prefix"
-msgstr "Adatgyűjtemény azonosító előtag"
+msgstr "Adatgyűjtemény-azonosító előtag"
 
 #. I18N: Label for search field
 #: find.php:198
@@ -10846,7 +10846,7 @@ msgstr "Elhunyt személyek hozzáférési szintjének beállítása."
 #. I18N: Help text for the “Use RIN number instead of GEDCOM ID” configuration setting
 #: admin_trees_config.php:730
 msgid "Set to <b>Yes</b> to use the RIN number instead of the GEDCOM ID when asked for individual IDs in configuration files, user settings, and charts.  This is useful for genealogy programs that do not consistently export GEDCOMs with the same ID assigned to each individual but always use the same RIN."
-msgstr "Az <b>Igen</b> a RIN szám használata a GEDCOM ID helyett az egyéni ID kérésekor a beállítások fájlban, felhasználói beállításokban és ábrákon.  Ez az olyan származástani alkalmazások esetén hasznos, melyek nem mentik következetesen a GEDCOM bejegyzéseket és egyazon egyénhez eltérő ID-t rendel, viszont azonos RIN-t."
+msgstr "Az <b>Igen</b> a RIN-szám (rekordazonosító szám) használata a GEDCOM-azonosító helyett egyéni azonosító kérésekor a beállítások fájlban, a felhasználói beállításokban és ábrákon. Ez az olyan származástani alkalmazások esetén hasznos, amik nem mentik következetesen az egyes személyek GEDCOM-azonosítóját, viszont mindig azonos RIN-számot használnak."
 
 #. I18N: Help text for the “Allow users to see raw GEDCOM records” configuration setting
 #: admin_trees_config.php:1684
@@ -11404,7 +11404,7 @@ msgstr "Lánytestvér"
 #. I18N: A site configuration setting
 #: admin_site_config.php:562 admin_site_config.php:578 admin_site_config.php:603
 msgid "Site identification code"
-msgstr "Oldal azonosító kód"
+msgstr "Oldalazonosító kód"
 
 #. I18N: Help text for the “Preferred contact method” configuration setting
 #: admin_users.php:478 edituser.php:297
@@ -11558,7 +11558,7 @@ msgstr "Forrás"
 
 #: admin_trees_config.php:793
 msgid "Source ID prefix"
-msgstr "Forrás azonosító előtag"
+msgstr "Forrásazonosító előtag"
 
 #. I18N: Help text for the “Use full source citations” configuration setting
 #: admin_trees_config.php:2214
@@ -12210,12 +12210,12 @@ msgstr "Egyenlőre erre a részre nem áll rendelkezésre súgószöveg."
 #. I18N: Help text for the “Technical help contact” configuration setting
 #: admin_trees_config.php:926
 msgid "The individual to be contacted about technical questions or errors encountered on your website."
-msgstr "Az az e-mail cím, amire a látogatók a szakmai jellegű kérdésekkel fordulhatnak, esetleg hibákat jelezhetnek."
+msgstr "Az a személy, akihez szakmai kérdésekben vagy esetleges hibákkal kapcsolatban fordulni lehet."
 
 #. I18N: Help text for the “Genealogy contact” configuration setting
 #: admin_trees_config.php:904
 msgid "The individual to contact about the genealogy data on this website."
-msgstr "Az az email cím, amire a látogatók írhatnak az oldalon levő családfa adatokkal kapcsolatban."
+msgstr "Az a személy, akihez e webhely családfaadatai ügyében fordulni lehet."
 
 #. I18N: %s are names of records, such as sources, repositories or individuals
 #: action.php:151 action.php:155 app/Controller/GedcomRecordController.php:50 app/Controller/GedcomRecordController.php:58
@@ -13079,11 +13079,11 @@ msgstr "Megadható a helyek pontossága új helyek felvétele esetén. Például
 #. I18N: Help text for the “Add to TITLE header tag” configuration setting
 #: admin_trees_config.php:948
 msgid "This text will be appended to each page title.  It will be shown in the browser’s title bar, bookmarks, etc."
-msgstr "A szöveg hozzá lesz adva az összes oldal fejlécéhez.  Megjelenik a böngésző címsorában, könyvjelzőkben stb."
+msgstr "Ez a szöveg lesz valamennyi oldalcím toldaléka.  Megjelenik a böngésző címsorában, könyvjelzőkben stb."
 
 #: admin_trees_check.php:180 admin_trees_check.php:185
 msgid "This type of link is not allowed here."
-msgstr "Ez a típusú hivatkozás nem helyénvaló."
+msgstr "Ez a típusú hivatkozás itt nem megengedett."
 
 #: setup.php:209
 msgid "This usually means that you need to change the folder permissions to 777."
@@ -13705,7 +13705,7 @@ msgstr "PHP mail funkció használata levélküldéshez"
 #. I18N: A configuration setting
 #: admin_trees_config.php:725
 msgid "Use RIN number instead of GEDCOM ID"
-msgstr "RIN# azonosító használata a GEDCOM ID helyett"
+msgstr "RIN-szám használata a GEDCOM-azonosító helyett"
 
 #: admin_site_config.php:117
 msgid "Use SMTP to send messages"
